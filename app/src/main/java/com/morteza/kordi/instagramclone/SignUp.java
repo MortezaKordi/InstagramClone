@@ -1,5 +1,6 @@
 package com.morteza.kordi.instagramclone;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -115,6 +116,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(SignUp.this,
+                        SignUpLoginActivity.class);
+                startActivity(intent);
             }
         });
 
