@@ -1,5 +1,6 @@
 package com.morteza.kordi.instagramclone;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -57,6 +58,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                            user.getUsername() + " is Logged in successfully",
                                            Toast.LENGTH_SHORT, FancyToast.SUCCESS,
                                            true).show();
+                                   transitionToSocialMediaActivity();
                                }
                            }
                        });
@@ -71,4 +73,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
 
+    private void transitionToSocialMediaActivity() {
+
+        Intent intent = new Intent(LoginActivity.this, SocialMediaActivity.class);
+        startActivity(intent);
+    }
 }
