@@ -66,6 +66,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             break;
 
             case R.id.btnSignUpLoginActivity:
+                Intent intent = new Intent(LoginActivity.this, SignUp.class);
+                startActivity(intent);
                 break;
 
 
@@ -77,5 +79,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Intent intent = new Intent(LoginActivity.this, SocialMediaActivity.class);
         startActivity(intent);
+        finish();
     }
+
+
 }
